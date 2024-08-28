@@ -1,0 +1,11 @@
+{
+  "name": "product-list",
+  "version": "1.0.0",
+  "description": "this is fiest project of frontend mento",
+  "main": "scripts.js",
+  "scripts": {
+    "test": "none"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,302 @@
+.wrapper {
+  width: 100%;
+  margin: 2rem auto 0;
+  background-color: white;
+  box-shadow: 10px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+}
+.product-section {
+  width: 60%;
+  margin-left: 2%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.heading {
+  color: #311a1a;
+  text-align: left;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2%;
+}
+#product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.product {
+  flex: calc(29% - 3rem);
+  padding: 0.6rem;
+  background-color: white;
+  text-align: left;
+  position: relative;
+  transition: box-shadow 0.3s ease;
+}
+.product:hover {
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+.product img {
+  max-width: 100%;
+  height: 13rem;
+  border-radius: 6%;
+}
+#product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.btn {
+  border: 1px solid #311a1a;
+  height: 2.6rem;
+  width: 8rem;
+  position: absolute;
+  top: 62%;
+  left: 46%;
+  transform: translate(-50%, -50%);
+  background-color: #ffff;
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+.btn:hover {
+  background-color: #ff5200;
+  border: none;
+}
+.btn .add-to-cart-text {
+  display: block;
+}
+.btn .quantity-controls {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  width: 80px;
+}
+.btn:hover .add-to-cart-text {
+  display: none;
+}
+.btn:hover .quantity-controls {
+  display: flex;
+}
+.btn .fa-cart-plus {
+  margin-right: 10px;
+}
+.btn .fa-minus,
+.btn .fa-plus {
+  cursor: pointer;
+}
+.product-name {
+  font-size: 1rem;
+  color: rgb(131, 127, 127);
+}
+.product-category {
+  color: rgb(68, 25, 25);
+  margin-top: -3%;
+  font-size: 1.2rem;
+}
+.product-price {
+  margin-top: -6%;
+  color: rgb(150, 49, 2);
+  font-size: 1.3rem;
+}
+.card-list {
+  width: 30%;
+  padding: 1rem;
+  background-color: white;
+  margin-top: -2%;
+}
+.card-item {
+  height: 20%;
+  background-color: #ff5722;
+  margin-top: 1rem;
+}
+.clear-cart-button {
+  background-color: #ff5722;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 2rem;
+  font-size: 1rem;
+}
+.increment-animation {
+  position: absolute;
+  top: -10px;
+  right: 10px;
+  font-size: 18px;
+  color: green;
+  opacity: 0;
+  animation: fade-in-out 1s ease-in-out;
+}
+/* Modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding-top: 60px;
+}
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 450px;
+  border-radius: 10px;
+}
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+.modal form {
+  display: flex;
+  flex-direction: column;
+}
+.modal form input,
+.modal form textarea {
+  margin-bottom: 15px;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+.modal form button {
+  padding: 10px;
+  font-size: 1rem;
+  color: white;
+  background-color: #311a1a;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.modal form button:hover {
+  background-color: rgb(255, 81, 0);
+}
+/* Hide the cart icon on hover */
+.btn:hover .cart-icon {
+  display: none;
+}
+.i {
+  color: #ff5722;
+}
+i.fa.fa-plus {
+  size: 10px;
+  margin-left: -20px;
+}
+i.fa.fa-minus {
+  margin-right: -20px;
+}
+.hidden {
+  display: none;
+}
+.h1 {
+  font-size: 30px;
+  font-weight: bolder;
+}
+.h2 {
+  margin-top: -3%;
+  font-size: 17px;
+  font-weight: 300;
+  color: #978f8f;
+}
+.name {
+  font-size: 1.5rem;
+  color: #0cc50c;
+}
+.icon-circle {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: white; /* White background */
+  color: #28a745; /* Green checkmark */
+  border-radius: 50%; /* Circular shape */
+  border: 2px solid #28a745; /* Visible green border */
+  text-align: center;
+  line-height: 39px; /* Align checkmark vertically */
+  font-size: 36px; /* Size of the checkmark */
+  margin-right: 5px; /* Space between icon and text */
+  margin-top: 2%; /* Adjust the vertical spacing */
+}
+/* Add this to your style.css */
+.order-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.order-item img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.order-item-name {
+  font-weight: bold;
+}
+
+.order-item-quantity {
+  margin-left: auto;
+}
+.orderItemsList {
+  display: flex;
+  flex-direction: column;
+}
+/* CSS for order item list */
+.order-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.order-item img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.order-item-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.order-item-name {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.order-item-quantity-price {
+  display: flex;
+  justify-content: space-between;
+  width: 150px; /* Adjust this width as needed */
+  font-size: 14px;
+}
+
+@keyframes fade-in-out {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
